@@ -1,32 +1,74 @@
+/*
+
+How to add a film grain effect to background?
+
+https://hookagency.com/website-color-schemes/
+
+9. Dark and Orange
+Dark Grey: #393939 – Dark designs take a little bit more fore-thought but can provide tons of contrast if used well. 
+
+Deep Orange: #FF5A09 – With different shades of oranges, there is depth and gradient, without venturing into totally new colors. 
+
+Light Orange: #ec7f37 – Utilizing illustrative elements, requires a bit of flexibility for the natural lightness and darkness to contour objects. 
+
+Orange Yellow: #be4f0c – Using on color over on the color wheel can keep the palette looking classy, bold and restrained.
+
+
+12. Stark Contrast
+Slate: #262626 – Repeat after me, all grays are not equal
+
+Secondhand Grey: #3f3f3f 
+
+Whitish: #f5f5f5 – Repeat after me, all whites are not equal
+
+Light grey: #dcdcdc
+
+*/
+
+:root {
+  --main-bg-color: #262626;
+  --sub-bg-color: #3f3f3f;
+  --main-color: #f5f5f5;
+  --sub-color: #dcdcdc;
+  --accent-color: rgb(230, 69, 69);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  background-color: var(--main-bg-color);
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  outline: none;
+  border-radius: 25px;
+  background-color: var(--main-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+button:hover, .BtnKeydown {
+  background-color: var(--accent-color);
+}
+
+button:active {
+  background-color: var(--main-color);
+}
+
+.drum-pad {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--main-bg-color);
+}
+
+.Display {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color:var(--main-color);
 }
